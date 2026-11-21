@@ -1,0 +1,83 @@
+# Local/single-host full-stack deployment. Supabase is NOT included here --
+# it's a managed cloud service (hosted Postgres + Auth + RLS), not
+# something this compose file self-hosts. Copy .env.example to .env and
+# fill in the six required values first; point
+# SUPABASE_URL/SUPABASE_SERVICE_ROLE_KEY at a real Supabase project (see
+# DEPLOY.md). Redis IS self-hosted here since it's just the optional
+# distributed-state backing store (core/stream.py, ml/persistence.py) --
+# the whole stack runs fine without it too, just single-instance.
+#
+# NOTE ON VERIFICATION: this file's structure (service wiring, healthcheck
+# dependencies, env var plumbing) follows the same shape validated by
+# directly running the backend against a real local Redis and a real pcap
+# file earlier in this build -- but `docker compose up` itself could not
+# be executed end-to-end in the sandbox this was authored in (its network
+# policy blocks every container registry tried: Docker Hub, ECR Public,
+# Microsoft Container Registry, GHCR). Each Dockerfile's syntax was
+# confirmed valid (docker build parses it and fails only at the external
+# image pull); the actual multi-container boot needs to be tried in an
+# environment with normal registry access. Said plainly in DEPLOY.md too.
+services:
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      SUPABASE_URL: ${SUPABASE_URL:?set SUPABASE_URL in .env}
+      SUPABASE_SERVICE_ROLE_KEY: ${SUPABASE_SERVICE_ROLE_KEY:?set SUPABASE_SERVICE_ROLE_KEY in .env}
+      SUPABASE_JWT_SECRET: ${SUPABASE_JWT_SECRET:-}
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY:-}
+      STRIPE_WEBHOOK_SECRET: ${STRIPE_WEBHOOK_SECRET:-}
+      STRIPE_PRICE_STARTER: ${STRIPE_PRICE_STARTER:-}
+      STRIPE_PRICE_PRO: ${STRIPE_PRICE_PRO:-}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:?set ALLOWED_ORIGINS in .env, e.g. http://localhost:3000}
+      INGEST_RATE_LIMIT: ${INGEST_RATE_LIMIT:-120/minute}
+      REDIS_URL: redis://redis:6379/0
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASSWORD: ${SMTP_PASSWORD:-}
+      SMTP_FROM: ${SMTP_FROM:-alerts@network-ai.example}
+      SMTP_USE_TLS: ${SMTP_USE_TLS:-true}
+      DEMO_TENANT_ID: ${DEMO_TENANT_ID:-}
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3).status==200 else 1)"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL:?set NEXT_PUBLIC_SUPABASE_URL in .env}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY:?set NEXT_PUBLIC_SUPABASE_ANON_KEY in .env}
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  redis-data:

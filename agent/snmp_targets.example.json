@@ -1,0 +1,5 @@
+[
+  {"host": "192.168.1.2", "version": "2c", "community": "CHANGE-ME-READ-ONLY"},
+  {"host": "192.168.1.3", "version": "3", "user": "monitor",
+   "auth_key": "CHANGE-ME", "auth_proto": "SHA", "priv_key": "CHANGE-ME", "priv_proto": "AES"}
+]

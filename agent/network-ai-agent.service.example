@@ -1,0 +1,24 @@
+[Unit]
+Description=Network AI live capture agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# tcpdump needs CAP_NET_RAW/CAP_NET_ADMIN to capture on an interface.
+# Prefer granting the capability to the agent's user over running as
+# root outright -- see README.md's "Permissions" section for both options.
+AmbientCapabilities=CAP_NET_RAW CAP_NET_ADMIN
+ExecStart=/usr/bin/python3 /opt/network-ai-agent/network_ai_agent.py \
+    --interface eth0 \
+    --api-url https://api.yourdomain.com \
+    --interval 30
+Environment=NETWORK_AI_API_KEY=replace-with-a-real-ingest-scoped-key
+Restart=on-failure
+RestartSec=5
+# SIGTERM is handled gracefully (interrupts the in-progress capture
+# window within ~0.5s, see network_ai_agent.py's capture_window()) --
+# default systemd TimeoutStopSec is more than enough headroom.
+
+[Install]
+WantedBy=multi-user.target
