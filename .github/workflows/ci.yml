@@ -1,0 +1,124 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: backend/requirements-dev.txt
+
+      - name: Install dependencies
+        working-directory: backend
+        run: pip install -r requirements-dev.txt
+
+      - name: Run tests
+        working-directory: backend
+        run: pytest -v
+
+      - name: Import sanity check (app must at least load)
+        working-directory: backend
+        run: python -c "from app.main import app; print(len(app.openapi()['paths']), 'routes registered')"
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Type check
+        working-directory: frontend
+        run: npx tsc --noEmit
+
+      - name: Browser engine matches Python reference (ECOD/LOF/IForest/pcap parser)
+        working-directory: frontend
+        run: npm run test:local
+
+      - name: Build
+        working-directory: frontend
+        env:
+          # Placeholder values -- enough for a build-time sanity check,
+          # not real credentials. Real deploys supply real ones (see
+          # DEPLOY.md) and build in the actual deploy pipeline, not here.
+          NEXT_PUBLIC_SUPABASE_URL: https://ci-placeholder.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ci-placeholder-anon-key
+          NEXT_PUBLIC_API_URL: http://localhost:8000
+        run: npm run build
+
+      - name: Audit (non-blocking)
+        working-directory: frontend
+        run: npm audit --audit-level=critical || echo "::warning::npm audit found issues -- see DEPLOY.md's Security notes section"
+        continue-on-error: true
+
+  agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: agent/requirements-dev.txt
+
+      - name: Install dependencies
+        working-directory: agent
+        run: pip install -r requirements-dev.txt
+
+      - name: Run tests
+        working-directory: agent
+        # Agent logic tests only (retry/backoff, shutdown handling,
+        # window-counting) -- these don't need tcpdump or capture
+        # privileges. The actual live-capture path was verified manually
+        # against a real interface and a real running backend (see
+        # agent/README.md); CI doesn't have packet-capture privileges to
+        # repeat that here.
+        run: pytest -v
+
+  database:
+    # Runs supabase/schema.sql on a real PostgreSQL server (twice, to prove it
+    # is re-runnable) and then the behavioural tests: tenant isolation (RLS),
+    # allowed values, retention purge permissions, cascade delete.
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      PGHOST: localhost
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      PGDATABASE: postgres
+    steps:
+      - uses: actions/checkout@v4
+      - name: Stub the parts of Supabase that already exist in a real project
+        run: psql -v ON_ERROR_STOP=1 -f supabase/tests/stub_supabase.sql
+      - name: Apply schema.sql (twice -- must be re-runnable)
+        run: |
+          psql -v ON_ERROR_STOP=1 -q -f supabase/schema.sql
+          psql -v ON_ERROR_STOP=1 -q -f supabase/schema.sql
+      - name: Schema behaviour tests
+        run: psql -v ON_ERROR_STOP=1 -f supabase/tests/schema_test.sql
