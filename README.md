@@ -1,13 +1,15 @@
 # Network AI — anomaly detection for private 4G/5G and OT networks
 
+<https://khabibullaevmurodilla.github.io/network_ai>
+
 A multi-tenant SaaS that ingests network flow telemetry (JSON, CSV, pcap, or a
 live capture agent), scores every flow with an ensemble of four unsupervised
 detectors, and shows analysts what is unusual and why. It also discovers the
 network itself: devices (passively and over SNMP), physical switch links, and
 the internet services a device talks to.
 
-**Try it on your own capture (runs in your browser, nothing uploaded):** `https://<your-github-username>.github.io/<repo-name>/analyze/`  
-**Live demo:** `https://<your-github-username>.github.io/<repo-name>/demo/` _(static snapshot on GitHub Pages — see [HOSTING.md](HOSTING.md); replace with your real link)_
+**Try it on your own capture (runs in your browser, nothing uploaded):** `https://khabibullaevmurodilla.github.io/network_ai/analyze/`  
+**Live demo:** `https://khabibullaevmurodilla.github.io/network_ai/demo/` _(static snapshot on GitHub Pages — see [HOSTING.md](HOSTING.md); replace with your real link)_
 · **Stack:** FastAPI · Supabase (Postgres + Auth + RLS) · Next.js 14 · Docker · PyOD / River
 
 ![Network topology](docs/screenshots/topology.png)
