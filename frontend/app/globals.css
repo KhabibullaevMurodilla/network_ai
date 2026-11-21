@@ -1,0 +1,82 @@
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+:root {
+  --bg-base: #10141b;
+  --bg-panel: #171d27;
+  --bg-panel-raised: #1e2530;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --text-primary: #e7eaee;
+  --text-muted: #8a93a3;
+  --text-dim: #5b6372;
+  --signal: #4bb8ae;
+  --signal-dim: rgba(75, 184, 174, 0.35);
+  --alert: #e8a33d;
+  --alert-dim: rgba(232, 163, 61, 0.35);
+  --critical: #d9544b;
+  --critical-dim: rgba(217, 84, 75, 0.35);
+
+  --font-sans: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+/* v6.3: optional light theme, toggled via a `data-theme="light"` attribute
+   on <html> (set client-side, persisted to localStorage -- see
+   lib/theme.ts). Dark is the product's default/primary design; light is
+   an accessibility/preference option, not a parallel design pass -- same
+   layout and components, remapped colors only. */
+:root[data-theme="light"] {
+  --bg-base: #f5f6f8;
+  --bg-panel: #ffffff;
+  --bg-panel-raised: #eef0f3;
+  --border: rgba(16, 20, 27, 0.1);
+  --border-strong: rgba(16, 20, 27, 0.18);
+  --text-primary: #14181f;
+  --text-muted: #5b6372;
+  --text-dim: #8a93a3;
+  --signal: #1f8d82;
+  --signal-dim: rgba(31, 141, 130, 0.16);
+  --alert: #b06f14;
+  --alert-dim: rgba(176, 111, 20, 0.16);
+  --critical: #b43328;
+  --critical-dim: rgba(180, 51, 40, 0.16);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-image:
+    radial-gradient(ellipse 1200px 600px at 15% -10%, rgba(75, 184, 174, 0.06), transparent 60%);
+}
+
+a { color: inherit; }
+
+::selection { background: var(--signal-dim); }
+
+/* visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+}
+
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

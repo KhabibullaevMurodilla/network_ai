@@ -1,0 +1,1452 @@
+[
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1362,
+  "detector": "ECOD",
+  "score": 28.76215956029225,
+  "is_anomaly": true,
+  "severity": "critical",
+  "explanation": [
+   {
+    "feature": "s_ttl",
+    "z_score": -3.27
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": -1.37
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": -1.33
+   }
+  ],
+  "consensus_count": 2,
+  "escalation_reason": "entity_burst",
+  "entity_baseline_z": null,
+  "incident_id": 1371,
+  "src_ip": "10.50.0.208",
+  "id": 6815,
+  "created_at": "2026-11-18T00:41:55.780662+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1361,
+  "detector": "ECOD",
+  "score": 8.945609375015895,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": 0.64
+   },
+   {
+    "feature": "dur",
+    "z_score": -0.42
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": -0.36
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.2530242787511217,
+  "incident_id": null,
+  "src_ip": "10.50.0.8",
+  "id": 6811,
+  "created_at": "2026-11-18T00:41:55.780655+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1360,
+  "detector": "ECOD",
+  "score": 9.66096940761892,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "s_ttl",
+    "z_score": 0.66
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": -0.61
+   },
+   {
+    "feature": "dur",
+    "z_score": -0.51
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.8437377720070705,
+  "incident_id": null,
+  "src_ip": "10.50.0.9",
+  "id": 6807,
+  "created_at": "2026-11-18T00:41:55.780651+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1359,
+  "detector": "ECOD",
+  "score": 9.862371996224262,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": 0.76
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": 0.59
+   },
+   {
+    "feature": "load",
+    "z_score": -0.28
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.080718928148114,
+  "incident_id": null,
+  "src_ip": "10.50.0.10",
+  "id": 6803,
+  "created_at": "2026-11-18T00:41:55.780646+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1358,
+  "detector": "ECOD",
+  "score": 11.390678282291027,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": 1.85
+   },
+   {
+    "feature": "rate",
+    "z_score": -0.22
+   },
+   {
+    "feature": "load",
+    "z_score": -0.15
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 2.2798755096168675,
+  "incident_id": null,
+  "src_ip": "10.50.0.7",
+  "id": 6799,
+  "created_at": "2026-11-18T00:41:55.780640+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1357,
+  "detector": "ECOD",
+  "score": 25.22361358507255,
+  "is_anomaly": true,
+  "severity": "critical",
+  "explanation": [
+   {
+    "feature": "tot_pkts",
+    "z_score": 6.54
+   },
+   {
+    "feature": "rate",
+    "z_score": 5.94
+   },
+   {
+    "feature": "load",
+    "z_score": 4.76
+   }
+  ],
+  "consensus_count": 3,
+  "escalation_reason": "entity_burst",
+  "entity_baseline_z": null,
+  "incident_id": 1367,
+  "src_ip": "10.50.0.202",
+  "id": 6795,
+  "created_at": "2026-11-18T00:41:55.780634+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1356,
+  "detector": "ECOD",
+  "score": 11.541243698881676,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": 0.93
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": 0.84
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": 0.42
+   }
+  ],
+  "consensus_count": 1,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.4554624422044011,
+  "incident_id": null,
+  "src_ip": "10.50.0.10",
+  "id": 6791,
+  "created_at": "2026-11-18T00:41:55.780628+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1355,
+  "detector": "ECOD",
+  "score": 9.140224752506976,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": -1.04
+   },
+   {
+    "feature": "dur",
+    "z_score": -0.3
+   },
+   {
+    "feature": "rate",
+    "z_score": -0.26
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.2482832972653246,
+  "incident_id": null,
+  "src_ip": "10.50.0.8",
+  "id": 6787,
+  "created_at": "2026-11-18T00:41:55.780623+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1354,
+  "detector": "ECOD",
+  "score": 8.416420382936668,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": 0.64
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": 0.3
+   },
+   {
+    "feature": "load",
+    "z_score": -0.26
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 0.9581325678474055,
+  "incident_id": null,
+  "src_ip": "10.50.0.5",
+  "id": 6783,
+  "created_at": "2026-11-18T00:41:55.780618+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1353,
+  "detector": "ECOD",
+  "score": 10.74808786837168,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": -0.64
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": 0.6
+   },
+   {
+    "feature": "dur",
+    "z_score": 0.48
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.4585156344739623,
+  "incident_id": null,
+  "src_ip": "10.50.0.7",
+  "id": 6779,
+  "created_at": "2026-11-18T00:41:55.780611+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1352,
+  "detector": "ECOD",
+  "score": 9.64207011595073,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": 1.12
+   },
+   {
+    "feature": "dur",
+    "z_score": 0.3
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": 0.3
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.3903912082415972,
+  "incident_id": null,
+  "src_ip": "10.50.0.9",
+  "id": 6775,
+  "created_at": "2026-11-18T00:41:55.780604+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1351,
+  "detector": "ECOD",
+  "score": 9.429922854009453,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": 0.81
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": 0.3
+   },
+   {
+    "feature": "load",
+    "z_score": -0.22
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.9171984332276542,
+  "incident_id": null,
+  "src_ip": "10.50.0.8",
+  "id": 6771,
+  "created_at": "2026-11-18T00:41:55.780597+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1350,
+  "detector": "ECOD",
+  "score": 10.335043328943868,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": -0.69
+   },
+   {
+    "feature": "dur",
+    "z_score": 0.33
+   },
+   {
+    "feature": "load",
+    "z_score": -0.28
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.071326804796665,
+  "incident_id": null,
+  "src_ip": "10.50.0.7",
+  "id": 6767,
+  "created_at": "2026-11-18T00:41:55.780592+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1349,
+  "detector": "ECOD",
+  "score": 9.827528792056825,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": 0.67
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": 0.48
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": 0.3
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.1738878665885215,
+  "incident_id": null,
+  "src_ip": "10.50.0.11",
+  "id": 6763,
+  "created_at": "2026-11-18T00:41:55.780587+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1348,
+  "detector": "ECOD",
+  "score": 10.769353752404417,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": 0.59
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": 0.54
+   },
+   {
+    "feature": "load",
+    "z_score": -0.28
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.3055569036224561,
+  "incident_id": null,
+  "src_ip": "10.50.0.9",
+  "id": 6759,
+  "created_at": "2026-11-18T00:41:55.780579+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1347,
+  "detector": "ECOD",
+  "score": 19.74271106966448,
+  "is_anomaly": false,
+  "severity": "critical",
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": 2.58
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": -1.84
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": -1.18
+   }
+  ],
+  "consensus_count": 3,
+  "escalation_reason": "entity_burst",
+  "entity_baseline_z": null,
+  "incident_id": 1364,
+  "src_ip": "10.50.0.204",
+  "id": 6755,
+  "created_at": "2026-11-18T00:41:55.780529+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1346,
+  "detector": "ECOD",
+  "score": 8.750395814021687,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": -0.66
+   },
+   {
+    "feature": "rate",
+    "z_score": -0.28
+   },
+   {
+    "feature": "load",
+    "z_score": -0.26
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.132193485472549,
+  "incident_id": null,
+  "src_ip": "10.50.0.12",
+  "id": 6751,
+  "created_at": "2026-11-18T00:41:55.780519+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1345,
+  "detector": "ECOD",
+  "score": 9.692564270757735,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "s_ttl",
+    "z_score": 0.3
+   },
+   {
+    "feature": "rate",
+    "z_score": -0.27
+   },
+   {
+    "feature": "load",
+    "z_score": -0.27
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.008920000640179,
+  "incident_id": null,
+  "src_ip": "10.50.0.12",
+  "id": 6747,
+  "created_at": "2026-11-18T00:41:55.780482+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1344,
+  "detector": "ECOD",
+  "score": 25.990805065815685,
+  "is_anomaly": true,
+  "severity": "critical",
+  "explanation": [
+   {
+    "feature": "load",
+    "z_score": 7.2
+   },
+   {
+    "feature": "rate",
+    "z_score": 5.87
+   },
+   {
+    "feature": "tot_pkts",
+    "z_score": 5.71
+   }
+  ],
+  "consensus_count": 3,
+  "escalation_reason": "entity_burst",
+  "entity_baseline_z": null,
+  "incident_id": 1367,
+  "src_ip": "10.50.0.202",
+  "id": 6743,
+  "created_at": "2026-11-18T00:41:55.780478+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1343,
+  "detector": "ECOD",
+  "score": 10.113697389476854,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": 0.78
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": 0.66
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": -0.64
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.9441743475451736,
+  "incident_id": null,
+  "src_ip": "10.50.0.6",
+  "id": 6739,
+  "created_at": "2026-11-18T00:41:55.780472+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1342,
+  "detector": "ECOD",
+  "score": 12.220898772026043,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": 1.23
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": -0.68
+   },
+   {
+    "feature": "dur",
+    "z_score": 0.6
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.8825269582235469,
+  "incident_id": null,
+  "src_ip": "10.50.0.9",
+  "id": 6735,
+  "created_at": "2026-11-18T00:41:55.780467+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1341,
+  "detector": "ECOD",
+  "score": 10.275269110655685,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": -0.85
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": 0.48
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": -0.3
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.039133781609748,
+  "incident_id": null,
+  "src_ip": "10.50.0.8",
+  "id": 6731,
+  "created_at": "2026-11-18T00:41:55.780460+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1340,
+  "detector": "ECOD",
+  "score": 8.991905065820031,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": 1.22
+   },
+   {
+    "feature": "dur",
+    "z_score": -0.38
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": 0.3
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.1214627333756682,
+  "incident_id": null,
+  "src_ip": "10.50.0.10",
+  "id": 6727,
+  "created_at": "2026-11-18T00:41:55.780455+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1339,
+  "detector": "ECOD",
+  "score": 9.878263792889612,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "s_ttl",
+    "z_score": 0.66
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": -0.47
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": 0.27
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 2.894808201038563,
+  "incident_id": null,
+  "src_ip": "10.50.0.11",
+  "id": 6723,
+  "created_at": "2026-11-18T00:41:55.780448+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1338,
+  "detector": "ECOD",
+  "score": 9.453313378137452,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": -0.62
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": 0.49
+   },
+   {
+    "feature": "load",
+    "z_score": -0.21
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 2.989635323920738,
+  "incident_id": null,
+  "src_ip": "10.50.0.10",
+  "id": 6719,
+  "created_at": "2026-11-18T00:41:55.780442+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1337,
+  "detector": "ECOD",
+  "score": 11.267244855924421,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": 1.16
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": 0.84
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": 0.53
+   }
+  ],
+  "consensus_count": 1,
+  "escalation_reason": null,
+  "entity_baseline_z": 2.5376816319722466,
+  "incident_id": null,
+  "src_ip": "10.50.0.11",
+  "id": 6715,
+  "created_at": "2026-11-18T00:41:55.780438+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1336,
+  "detector": "ECOD",
+  "score": 27.937451106070917,
+  "is_anomaly": true,
+  "severity": "critical",
+  "explanation": [
+   {
+    "feature": "s_ttl",
+    "z_score": -4.52
+   },
+   {
+    "feature": "tot_pkts",
+    "z_score": 4.03
+   },
+   {
+    "feature": "rate",
+    "z_score": 2.5
+   }
+  ],
+  "consensus_count": 3,
+  "escalation_reason": "entity_burst",
+  "entity_baseline_z": null,
+  "incident_id": 1372,
+  "src_ip": "10.50.0.201",
+  "id": 6711,
+  "created_at": "2026-11-18T00:41:55.780430+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1335,
+  "detector": "ECOD",
+  "score": 9.371247781647796,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": -1.21
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": 0.95
+   },
+   {
+    "feature": "dur",
+    "z_score": -0.45
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.4874927432394738,
+  "incident_id": null,
+  "src_ip": "10.50.0.9",
+  "id": 6707,
+  "created_at": "2026-11-18T00:41:55.780425+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1334,
+  "detector": "ECOD",
+  "score": 10.199031557485172,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": 0.74
+   },
+   {
+    "feature": "dur",
+    "z_score": -0.42
+   },
+   {
+    "feature": "load",
+    "z_score": -0.28
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.1486751847072811,
+  "incident_id": null,
+  "src_ip": "10.50.0.8",
+  "id": 6703,
+  "created_at": "2026-11-18T00:41:55.780419+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1333,
+  "detector": "ECOD",
+  "score": 11.346118394670718,
+  "is_anomaly": false,
+  "severity": "low",
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": 1.1
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": 0.81
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": 0.66
+   }
+  ],
+  "consensus_count": 2,
+  "escalation_reason": "ensemble_consensus",
+  "entity_baseline_z": 2.111430196711013,
+  "incident_id": 1370,
+  "src_ip": "10.50.0.12",
+  "id": 6699,
+  "created_at": "2026-11-18T00:41:55.780410+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1332,
+  "detector": "ECOD",
+  "score": 26.455720897982214,
+  "is_anomaly": true,
+  "severity": "critical",
+  "explanation": [
+   {
+    "feature": "tot_pkts",
+    "z_score": 3.62
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": -3.27
+   },
+   {
+    "feature": "load",
+    "z_score": 3.1
+   }
+  ],
+  "consensus_count": 3,
+  "escalation_reason": "entity_burst",
+  "entity_baseline_z": null,
+  "incident_id": 1372,
+  "src_ip": "10.50.0.201",
+  "id": 6695,
+  "created_at": "2026-11-18T00:41:55.780375+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1331,
+  "detector": "ECOD",
+  "score": 9.22041296258951,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "s_ttl",
+    "z_score": 0.84
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": -0.43
+   },
+   {
+    "feature": "load",
+    "z_score": -0.24
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.946291309863004,
+  "incident_id": null,
+  "src_ip": "10.50.0.12",
+  "id": 6691,
+  "created_at": "2026-11-18T00:41:55.780366+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1330,
+  "detector": "ECOD",
+  "score": 8.897750146931362,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "s_ttl",
+    "z_score": 0.66
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": -0.62
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": 0.36
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.1011471023938113,
+  "incident_id": null,
+  "src_ip": "10.50.0.12",
+  "id": 6687,
+  "created_at": "2026-11-18T00:41:55.780360+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1329,
+  "detector": "ECOD",
+  "score": 10.120862991721184,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": 1.07
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": 0.51
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": 0.48
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.1742435507652618,
+  "incident_id": null,
+  "src_ip": "10.50.0.10",
+  "id": 6683,
+  "created_at": "2026-11-18T00:41:55.780355+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1328,
+  "detector": "ECOD",
+  "score": 8.174516696462442,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": 1.04
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": 0.66
+   },
+   {
+    "feature": "load",
+    "z_score": -0.23
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.5558832450983906,
+  "incident_id": null,
+  "src_ip": "10.50.0.11",
+  "id": 6679,
+  "created_at": "2026-11-18T00:41:55.780349+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1327,
+  "detector": "ECOD",
+  "score": 24.806455283295495,
+  "is_anomaly": true,
+  "severity": "critical",
+  "explanation": [
+   {
+    "feature": "s_ttl",
+    "z_score": -2.02
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": -1.37
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": -1.33
+   }
+  ],
+  "consensus_count": 2,
+  "escalation_reason": "entity_burst",
+  "entity_baseline_z": null,
+  "incident_id": 1371,
+  "src_ip": "10.50.0.208",
+  "id": 6675,
+  "created_at": "2026-11-18T00:41:55.780344+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1326,
+  "detector": "ECOD",
+  "score": 13.133419010897866,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": 1.99
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": -0.69
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": 0.66
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.629380523938428,
+  "incident_id": null,
+  "src_ip": "10.50.0.11",
+  "id": 6671,
+  "created_at": "2026-11-18T00:41:55.780336+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1325,
+  "detector": "ECOD",
+  "score": 10.947504047428776,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": 1.75
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": -0.59
+   },
+   {
+    "feature": "rate",
+    "z_score": -0.27
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 2.6238509916253787,
+  "incident_id": null,
+  "src_ip": "10.50.0.5",
+  "id": 6667,
+  "created_at": "2026-11-18T00:41:55.780330+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1324,
+  "detector": "ECOD",
+  "score": 9.249362591206637,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": 0.35
+   },
+   {
+    "feature": "dur",
+    "z_score": -0.3
+   },
+   {
+    "feature": "rate",
+    "z_score": -0.28
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.4981229237814084,
+  "incident_id": null,
+  "src_ip": "10.50.0.7",
+  "id": 6663,
+  "created_at": "2026-11-18T00:41:55.780325+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1323,
+  "detector": "ECOD",
+  "score": 8.57267860498209,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": 0.69
+   },
+   {
+    "feature": "dur",
+    "z_score": -0.31
+   },
+   {
+    "feature": "load",
+    "z_score": -0.26
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.363638985071143,
+  "incident_id": null,
+  "src_ip": "10.50.0.7",
+  "id": 6659,
+  "created_at": "2026-11-18T00:41:55.780316+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1322,
+  "detector": "ECOD",
+  "score": 8.861110210953568,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": 0.51
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": 0.48
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": 0.32
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 0.9981796929262586,
+  "incident_id": null,
+  "src_ip": "10.50.0.7",
+  "id": 6655,
+  "created_at": "2026-11-18T00:41:55.780308+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1321,
+  "detector": "ECOD",
+  "score": 7.516347222543507,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dur",
+    "z_score": -0.41
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": -0.4
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": 0.3
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 0.9940610610326953,
+  "incident_id": null,
+  "src_ip": "10.50.0.5",
+  "id": 6651,
+  "created_at": "2026-11-18T00:41:55.780299+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1320,
+  "detector": "ECOD",
+  "score": 25.714782260870237,
+  "is_anomaly": true,
+  "severity": "critical",
+  "explanation": [
+   {
+    "feature": "dur",
+    "z_score": 7.23
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": -1.48
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": -1.35
+   }
+  ],
+  "consensus_count": 2,
+  "escalation_reason": "entity_burst",
+  "entity_baseline_z": null,
+  "incident_id": 1366,
+  "src_ip": "10.50.0.205",
+  "id": 6647,
+  "created_at": "2026-11-18T00:41:55.780292+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1319,
+  "detector": "ECOD",
+  "score": 8.95264202251035,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": 0.74
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": 0.48
+   },
+   {
+    "feature": "dur",
+    "z_score": -0.45
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.0973913154873856,
+  "incident_id": null,
+  "src_ip": "10.50.0.6",
+  "id": 6643,
+  "created_at": "2026-11-18T00:41:55.780285+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1318,
+  "detector": "ECOD",
+  "score": 12.273473399044107,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": 1.0
+   },
+   {
+    "feature": "dur",
+    "z_score": -0.46
+   },
+   {
+    "feature": "tot_pkts",
+    "z_score": -0.26
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.3659251422742622,
+  "incident_id": null,
+  "src_ip": "10.50.0.12",
+  "id": 6639,
+  "created_at": "2026-11-18T00:41:55.780276+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1317,
+  "detector": "ECOD",
+  "score": 13.78663785780157,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": 2.24
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": -0.73
+   },
+   {
+    "feature": "dur",
+    "z_score": -0.5
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 2.4909898092633247,
+  "incident_id": null,
+  "src_ip": "10.50.0.5",
+  "id": 6635,
+  "created_at": "2026-11-18T00:41:55.780269+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1316,
+  "detector": "ECOD",
+  "score": 26.83622757109609,
+  "is_anomaly": true,
+  "severity": "critical",
+  "explanation": [
+   {
+    "feature": "s_ttl",
+    "z_score": -3.45
+   },
+   {
+    "feature": "dst_bytes",
+    "z_score": -1.37
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": -1.33
+   }
+  ],
+  "consensus_count": 2,
+  "escalation_reason": "entity_burst",
+  "entity_baseline_z": null,
+  "incident_id": 1373,
+  "src_ip": "10.50.0.207",
+  "id": 6631,
+  "created_at": "2026-11-18T00:41:55.780260+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1315,
+  "detector": "ECOD",
+  "score": 13.230846604040753,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": 1.86
+   },
+   {
+    "feature": "dur",
+    "z_score": 0.57
+   },
+   {
+    "feature": "src_bytes",
+    "z_score": 0.56
+   }
+  ],
+  "consensus_count": 1,
+  "escalation_reason": null,
+  "entity_baseline_z": 2.052180335788536,
+  "incident_id": null,
+  "src_ip": "10.50.0.12",
+  "id": 6627,
+  "created_at": "2026-11-18T00:41:55.780250+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1314,
+  "detector": "ECOD",
+  "score": 13.155419360648569,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "src_bytes",
+    "z_score": -0.58
+   },
+   {
+    "feature": "tot_pkts",
+    "z_score": -0.29
+   },
+   {
+    "feature": "load",
+    "z_score": -0.28
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 2.035036578214637,
+  "incident_id": null,
+  "src_ip": "10.50.0.5",
+  "id": 6623,
+  "created_at": "2026-11-18T00:41:55.780243+00:00"
+ },
+ {
+  "tenant_id": "dd000000-0000-0000-0000-000000000001",
+  "flow_id": 1313,
+  "detector": "ECOD",
+  "score": 13.161836361872652,
+  "is_anomaly": false,
+  "severity": null,
+  "explanation": [
+   {
+    "feature": "dst_bytes",
+    "z_score": -1.03
+   },
+   {
+    "feature": "dur",
+    "z_score": -0.56
+   },
+   {
+    "feature": "s_ttl",
+    "z_score": 0.48
+   }
+  ],
+  "consensus_count": 0,
+  "escalation_reason": null,
+  "entity_baseline_z": 1.6661248228429306,
+  "incident_id": null,
+  "src_ip": "10.50.0.6",
+  "id": 6619,
+  "created_at": "2026-11-18T00:41:55.780225+00:00"
+ }
+]

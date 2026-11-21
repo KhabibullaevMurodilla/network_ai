@@ -1,0 +1,28 @@
+{
+  "name": "network-ai-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test:live": "tsx tests/local/validate_live.ts",
+    "test:local": "tsx tests/local/validate.ts && tsx tests/local/validate_pcap.ts && tsx tests/local/validate_local_mode.ts && tsx tests/local/validate_modbus.ts && tsx tests/local/validate_discovery.ts"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/ibm-plex-sans": "^5.3.0",
+    "@supabase/supabase-js": "^2.45.4",
+    "next": "^14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "@types/react": "^18.3.11",
+    "fake-indexeddb": "^6.2.8",
+    "tsx": "^4.23.15",
+    "typescript": "^5.6.3"
+  }
+}
