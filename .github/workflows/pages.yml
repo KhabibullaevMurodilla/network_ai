@@ -1,0 +1,52 @@
+name: Deploy demo to GitHub Pages
+
+# Publishes a STATIC site in LOCAL MODE: landing page, /demo, /analyze and the full dashboard
+# running in the visitor's browser against a browser-local database (no backend, no Supabase,
+# no login). Server-only pages (alert delivery, team, API keys ...) are left out.
+# One-time setup: repo Settings -> Pages -> Source: "GitHub Actions".
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Build static local-mode site
+        working-directory: frontend
+        env:
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+          NEXT_PUBLIC_HELPER_URL: https://github.com/${{ github.repository }}/releases/latest
+        run: |
+          npm ci
+          bash scripts/build-static-demo.sh
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
